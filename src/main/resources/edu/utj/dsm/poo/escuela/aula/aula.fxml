@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:controller="edu.utj.dsm.poo.escuela.controlador.AulaController" prefHeight="486" prefWidth="650.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="tabla" layoutX="20.0" layoutY="20" prefHeight="250.0" prefWidth="610.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="100.0" text="ID Aula" />
+          <TableColumn fx:id="colNumero" prefWidth="200.0" text="Número de Aula" />
+          <TableColumn fx:id="colCapacidad" prefWidth="150.0" text="Capacidad" />
+          <TableColumn fx:id="colDisponible" prefWidth="150.0" text="¿Disponible?" />
+        </columns>
+      </TableView>
+      <Label layoutX="30.0" layoutY="300" text="ID Aula:" />
+      <TextField fx:id="txtIdAula" layoutX="30.0" layoutY="320" prefWidth="100.0" />
+      <Label layoutX="150.0" layoutY="300" text="Número de Aula:" />
+      <TextField fx:id="txtNumeroAula" layoutX="150.0" layoutY="320" prefWidth="150.0" />
+      <Label layoutX="320.0" layoutY="300" text="Capacidad:" />
+      <TextField fx:id="txtCapacidad" layoutX="320.0" layoutY="320" prefWidth="100.0" />
+      <CheckBox fx:id="chkDisponible" layoutX="450.0" layoutY="324" mnemonicParsing="false" text="Está Disponible" />
+      <Button onAction="#onGuardar" fx:id="btnGuardar" layoutX="150.0" layoutY="404" mnemonicParsing="false" text="Guardar" />
+      <Button onAction="#onEditar" fx:id="btnEditar" layoutX="240.0" layoutY="404" mnemonicParsing="false" text="Editar" />
+      <Button onAction="#onEliminar" fx:id="btnEliminar" layoutX="330.0" layoutY="404" mnemonicParsing="false" text="Borrar" />
+      <Button onAction="#onLimpiar" fx:id="btnLimpiar" layoutX="420.0" layoutY="404" mnemonicParsing="false" text="Limpiar Formulario" />
+      <Label fx:id="lblErrorIdAula" alignment="TOP_LEFT" layoutX="30" layoutY="346" prefHeight="24.0" prefWidth="100" style="-fx-text-fill: #d32f2f; -fx-font-size: 9px;" wrapText="true" />
+      <Label fx:id="lblErrorNumeroAula" alignment="TOP_LEFT" layoutX="150" layoutY="346" prefHeight="24.0" prefWidth="150" style="-fx-text-fill: #d32f2f; -fx-font-size: 9px;" wrapText="true" />
+      <Label fx:id="lblErrorCapacidad" alignment="TOP_LEFT" layoutX="320" layoutY="346" prefHeight="24.0" prefWidth="100" style="-fx-text-fill: #d32f2f; -fx-font-size: 9px;" wrapText="true" />
+      <Button fx:id="btnNuevo" layoutX="20.0" layoutY="441" mnemonicParsing="false" onAction="#onNuevo" text="Nuevo" />
+      <Button fx:id="btnValidar" layoutX="100.0" layoutY="441" mnemonicParsing="false" onAction="#onValidar" text="Validar" />
+   </children>
+</AnchorPane>
